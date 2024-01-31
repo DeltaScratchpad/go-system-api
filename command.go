@@ -16,12 +16,12 @@ type CommandList struct {
 }
 
 type EventData struct {
-	Raw       *string                 `json:"raw"`
-	IndexTime *time.Time              `json:"index_time"`
-	TimeStamp *time.Time              `json:"time_stamp"`
-	EventType *string                 `json:"event_type"`
-	Category  *string                 `json:"category"`
-	Derived   *map[string]interface{} `json:"derived"`
+	Raw       *string                `json:"raw"`
+	IndexTime *time.Time             `json:"index_time"`
+	TimeStamp *time.Time             `json:"time_stamp"`
+	EventType *string                `json:"event_type"`
+	Category  *string                `json:"category"`
+	Derived   map[string]interface{} `json:"derived"`
 }
 
 type ProcessingEvent struct {

@@ -33,7 +33,7 @@ func TestCommand(t *testing.T) {
 			TimeStamp: &timeNow,
 			EventType: nil,
 			Category:  nil,
-			Derived:   &derived,
+			Derived:   derived,
 		},
 	}
 
