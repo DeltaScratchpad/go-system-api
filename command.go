@@ -24,7 +24,23 @@ type EventData struct {
 	Derived   map[string]interface{} `json:"derived"`
 }
 
+func NewEmptyData() EventData {
+	return EventData{
+		Raw:       nil,
+		IndexTime: nil,
+		TimeStamp: nil,
+		EventType: nil,
+		Category:  nil,
+		Derived:   make(map[string]interface{}),
+	}
+}
+
 type ProcessingEvent struct {
 	Commands CommandList `json:"commands"`
 	Event    EventData   `json:"event"`
+}
+
+type BatchProcessingEvent struct {
+	Commands CommandList `json:"commands"`
+	Events   []EventData `json:"event"`
 }
